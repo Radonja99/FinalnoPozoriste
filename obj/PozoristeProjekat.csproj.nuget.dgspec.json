@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\PozoristeProjekat.csproj": {}
+    "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\FinalnoPozoriste\\PozoristeProjekat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\PozoristeProjekat.csproj": {
+    "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\FinalnoPozoriste\\PozoristeProjekat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\PozoristeProjekat.csproj",
+        "projectUniqueName": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\FinalnoPozoriste\\PozoristeProjekat.csproj",
         "projectName": "PozoristeProjekat",
-        "projectPath": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\PozoristeProjekat.csproj",
+        "projectPath": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\FinalnoPozoriste\\PozoristeProjekat.csproj",
         "packagesPath": "C:\\Users\\Radonja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\obj\\",
+        "outputPath": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\FinalnoPozoriste\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Radonja\\AppData\\Roaming\\NuGet\\NuGet.Config",

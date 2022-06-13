@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zalp4OAYxnutj7hIphEY6uD+d0Y9gBLqm71k2sjwQ6O2O2yGqF1LyyoHAiNBSNct0TpizJfvPflSD2SsHBZ29w==",
+  "dgSpecHash": "K/IKVFKmhpjDka5Bc2AJZ50oDuX2zT79MaS/rZ7JLS01R9qEg23RBDrXsgDzv1y8ym9QfAQcf1fUgxE5gqnPRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\PozoristeProjekat.csproj",
+  "projectFilePath": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\FinalnoPozoriste\\PozoristeProjekat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Radonja\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Radonja\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
