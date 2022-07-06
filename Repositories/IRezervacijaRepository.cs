@@ -17,7 +17,7 @@ namespace PozoristeProjekat.Repositories
 
         RezervacijaConfirmation CreateRezervacija(Rezervacija rezervacija);
 
-        RezervacijaConfirmation UpdateRezervacija(Rezervacija rezervacija);
+        RezervacijaConfirmation UpdateRezervacija(Guid rezervacijaID);
 
         List<Rezervacija> GetSveRezervacijeKorisnika(Guid id);
 

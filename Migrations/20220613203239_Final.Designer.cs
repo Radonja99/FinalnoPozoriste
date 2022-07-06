@@ -10,8 +10,8 @@ using PozoristeProjekat.Models;
 namespace PozoristeProjekat.Migrations
 {
     [DbContext(typeof(PozoristeContext))]
-    [Migration("20220609200355_Cascade")]
-    partial class Cascade
+    [Migration("20220613203239_Final")]
+    partial class Final
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

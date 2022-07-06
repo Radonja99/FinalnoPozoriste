@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\PozoristeProjekat.csproj": {}
+    "C:\\Users\\ADMIN\\Test\\test1\\FinalnoPozoriste\\PozoristeProjekat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\PozoristeProjekat.csproj": {
+    "C:\\Users\\ADMIN\\Test\\test1\\FinalnoPozoriste\\PozoristeProjekat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\PozoristeProjekat.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Test\\test1\\FinalnoPozoriste\\PozoristeProjekat.csproj",
         "projectName": "PozoristeProjekat",
-        "projectPath": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\PozoristeProjekat.csproj",
-        "packagesPath": "C:\\Users\\Radonja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Test\\test1\\FinalnoPozoriste\\PozoristeProjekat.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Test\\test1\\FinalnoPozoriste\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Radonja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,6 +52,10 @@
               "version": "[11.0.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[5.0.17, )"
             },
@@ -89,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

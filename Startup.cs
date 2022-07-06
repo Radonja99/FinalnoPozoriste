@@ -31,6 +31,7 @@ namespace PozoristeProjekat
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddMvc().AddNewtonsoftJson();
             services.AddDbContext<PozoristeContext>(item => item.UseSqlServer(Configuration.GetConnectionString("DefaultDatabase")));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IIzvedbaRepository, IzvedbaRepository>();
@@ -83,14 +84,14 @@ namespace PozoristeProjekat
 
             app.UseAuthorization();
 
-            
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseEndpoints(endpoints => endpoints.MapControllers());
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Home}/{action=Index}/{id?}");
+            //});
         }
     }
 }

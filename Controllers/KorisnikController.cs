@@ -63,9 +63,7 @@ namespace PozoristeProjekat.Controllers
             {
                 Korisnik korisnikEntity = mapper.Map<Korisnik>(korisnik);
                 KorisnikConfirmation confirmation = korisnikRepository.CreateKorisnik(korisnikEntity);
-
                 korisnikRepository.SaveChanges();
-
                 string location = linkGenerator.GetPathByAction("GetKorisnikSve", "Korisnik", new { confirmation.KorisnikID });
                 return Created(location, mapper.Map<KorisnikConfirmationDTO>(confirmation));
             }

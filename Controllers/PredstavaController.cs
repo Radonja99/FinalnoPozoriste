@@ -68,9 +68,9 @@ namespace PozoristeProjekat.Controllers
                 string location = linkGenerator.GetPathByAction("GetPredstaveSve", "Predstava", new { PredstavaID = confirmation.PredstavaID });
                 return Created(location, mapper.Map<PredstavaConfirmationDTO>(confirmation));
             }
-            catch
+            catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Create error");
+                return StatusCode(StatusCodes.Status500InternalServerError, e.GetBaseException().Message);
 
             }
         }

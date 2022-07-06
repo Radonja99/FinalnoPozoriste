@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Stripe.Checkout;
+using Stripe;
 
 namespace PozoristeProjekat.Controllers
 {
@@ -11,8 +12,35 @@ namespace PozoristeProjekat.Controllers
     {
         [HttpPost]
         [Route("api/stripe")]
-        public ActionResult CreateCheckoutSession(int ukupnaCenaRezervacija)
+        public ActionResult CreateCheckoutSession(int ukupnaCenaRezervacija, string rezervacijaID, string emailunos)
         {
+            //var optionsSearch = new CustomerSearchOptions
+            //{
+            //    Query = "email:'bs@test.com'",
+            //};
+            //var serviceSearch = new CustomerService();
+            
+            //StripeSearchResult<Stripe.Customer> rezultat = serviceSearch.Search(optionsSearch);
+            //Console.WriteLine(rezultat);
+            //string customerstari = rezultat.FirstOrDefault().Id;
+            //Console.WriteLine(customerstari);
+
+
+//            #region
+//            var optionsUpdate = new CustomerUpdateOptions
+//            {
+//                Description = rezervacijaID,
+//            };
+//            var serviceUpdate = new CustomerService();
+//            serviceUpdate.Update(customerstari, optionsUpdate);
+//#endregion
+            var options = new CustomerCreateOptions
+            {
+                Description = rezervacijaID,
+            };
+            var service2 = new CustomerService();
+            Customer customer = service2.Create(options);
+            string CustomerID = customer.Id;
             string price = null;
             if (ukupnaCenaRezervacija == 300)
             {
@@ -47,8 +75,7 @@ namespace PozoristeProjekat.Controllers
                 price = "price_1LAB3kADqdpBkuR8ZSKhwtZc";
             }
             var domain = "http://localhost:3000/";
-            Console.Write(ukupnaCenaRezervacija);
-            var options = new SessionCreateOptions()
+            var options1 = new SessionCreateOptions()
             {
                 LineItems = new List<SessionLineItemOptions>()
                 {
@@ -59,16 +86,18 @@ namespace PozoristeProjekat.Controllers
                     }
                 },
                 PaymentMethodTypes = new List<string>()
-            {
-                "card"
-            },
+                {
+                    "card"
+                },
                 Mode = "payment",
                 SuccessUrl = domain + "success",
-                CancelUrl = domain + "cancel"
+                CancelUrl = domain + "cancel",
+                ClientReferenceId = rezervacijaID,
+                Customer = CustomerID,
             };
 
             var service = new SessionService();
-            Session session = service.Create(options);
+            Session session = service.Create(options1);
 
             Response.Headers.Add("Location", session.Url);
             return new StatusCodeResult(303);

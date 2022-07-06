@@ -68,20 +68,18 @@ namespace PozoristeProjekat.Repositories
             return context.SaveChanges() > 0;
         }
 
-        public RezervacijaConfirmation UpdateRezervacija(Rezervacija rezervacija)
+        public RezervacijaConfirmation UpdateRezervacija(Guid rezervacijaID)
         {
-            Rezervacija rezervacijaold = GetRezervacijaById(rezervacija.RezervacijaID);
+            Rezervacija rezervacijaold = GetRezervacijaById(rezervacijaID);
             //     rezervacijaold.RezervacijaID = rezervacija.RezervacijaID;
             //     rezervacijaold.DatumKreiranjaRezervacije = rezervacija.DatumKreiranjaRezervacije;
-            rezervacija.Placeno = true;
+            GetRezervacijaById(rezervacijaID).Placeno = true;
             rezervacijaold.Placeno = true;
 
             return new RezervacijaConfirmation()
             {
                 RezervacijaID = rezervacijaold.RezervacijaID,
                 DatumKreiranjaRezervacije = rezervacijaold.DatumKreiranjaRezervacije,
-               
-                
             };
         }
         public List<Rezervacija> GetSveRezervacijeKorisnika(Guid id)

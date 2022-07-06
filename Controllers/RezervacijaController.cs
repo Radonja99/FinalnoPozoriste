@@ -60,7 +60,6 @@ namespace PozoristeProjekat.Controllers
             try
             {
                 Rezervacija rezervacijaEntity = mapper.Map<Rezervacija>(rezervacija);
-                Console.Write(rezervacijaEntity.RezervacijaID);
                 //       if (izvedbaRepository.GetIzvedbaById((Guid)rezervacijaEntity.IzvedbaID).BrojSlobodnihMesta< rezervacijaEntity.BrojMesta)
                 //       {
                 //          return StatusCode(StatusCodes.Status406NotAcceptable, "Nema dovoljno mesta za tu izvedbu.");
@@ -108,16 +107,16 @@ namespace PozoristeProjekat.Controllers
         }
         [HttpPut("{RezervacijaID}")]
    //     [Authorize(Roles = "admin")]
-        public ActionResult<RezervacijaConfirmationDTO> UpdateRezervacija (RezervacijaUpdateDTO rezervacija)
+        public ActionResult<RezervacijaConfirmationDTO> UpdateRezervacija (Guid rezervacijaID)
         {
             try
             {
-                if (rezervacijaRepository.GetRezervacijaById(rezervacija.RezervacijaID) == null)
+                if (rezervacijaRepository.GetRezervacijaById(rezervacijaID) == null)
                 {
                     return NotFound();
                 }
-                Rezervacija rezervacija2 = mapper.Map<Rezervacija>(rezervacija);
-                RezervacijaConfirmation confirmation = rezervacijaRepository.UpdateRezervacija(rezervacija2);
+                Rezervacija rezervacija2 = mapper.Map<Rezervacija>(GetRezervacija(rezervacijaID));
+                RezervacijaConfirmation confirmation = rezervacijaRepository.UpdateRezervacija(rezervacija2.RezervacijaID);
                 rezervacijaRepository.SaveChanges();
                 return Ok(mapper.Map<RezervacijaConfirmation>(confirmation));
             }
