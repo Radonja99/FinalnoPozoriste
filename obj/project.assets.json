@@ -5671,11 +5671,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\ADMIN\\Test\\test1\\FinalnoPozoriste\\PozoristeProjekat.csproj",
       "projectName": "PozoristeProjekat",
       "projectPath": "C:\\Users\\ADMIN\\Test\\test1\\FinalnoPozoriste\\PozoristeProjekat.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ADMIN\\Test\\test1\\FinalnoPozoriste\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\FinalnoPozoriste\\PozoristeProjekat.csproj",
+      "projectName": "PozoristeProjekat",
+      "projectPath": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\FinalnoPozoriste\\PozoristeProjekat.csproj",
+      "packagesPath": "C:\\Users\\Radonja\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Radonja\\Downloads\\PozoristeProjekatDva-main\\PozoristeProjekatDva-main\\FinalnoPozoriste\\obj\\",
+>>>>>>> 67e39eb1b1dcbe34b1cb867f36b91711b3ae6a2b
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
